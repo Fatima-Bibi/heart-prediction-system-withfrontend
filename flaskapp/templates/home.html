@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <!-- Add Bootstrap CDN link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles here */
+        body {
+            
+            background-color:white; /* Set a light background color for the body */
+            /* background-color:#967BB6; Set a light background color for the body */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            color: black;
+        }
+        .container {
+            background-color:#90EE90; /* Set the background color of the form to pink */
+            padding: 20px;
+            border-radius: 10px;
+            width: 500px; /* Add rounded corners to the form */
+        }
+        .form-group {
+            width: 50%; /* Make the width of the input elements half */
+            margin: 0 auto; /* Center the form on the page */
+        }
+        h2{
+            text-align: center;
+        }
+        .form-control {
+            width: 100%; /* Make the width of the input fields 100% within the form-group */
+            border: 1px solid #000; /* Set the border to 3px solid black */
+            border-radius: 5px;
+        }
+        .center-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+        </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Heart Disease Prediction</h2>
+    <form action="/predict" method="post">
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="">Gender(0-1)</label>
+            <input type="number" class="form-control" id="sex" name="sex" required>
+        </div>
+        <div class="form-group">
+            <label for="">Chest Pain Type(0-3)</label>
+            <input type="number" class="form-control" id="cp" name="cp" required>
+        </div>
+        <div class="form-group">
+            <label for="">Trestbps</label>
+            <input type="number" class="form-control" id="trestbps" name="trestbps" required>
+        </div>
+        <div class="form-group">
+            <label for="">Chol</label>
+            <input type="number" class="form-control" id="chol" name="chol" required>
+        </div>
+        <div class="form-group">
+            <label for="">Fbs(0-1)</label>
+            <input type="number" class="form-control" id="fbs" name="fbs" required>
+        </div>
+
+        <div class="form-group">
+            <label for="">Restecg(0-1)</label>
+            <input type="number" class="form-control" id="restecg" name="restecg" required>
+        </div>
+        <div class="form-group">
+            <label for="">Thalach</label>
+            <input type="number" class="form-control" id="thalach" name="thalach" required>
+        </div>
+        <div class="form-group">
+            <label for="">Exang(0-1)</label>
+            <input type="number" class="form-control" id="exang" name="exang" required>
+        </div>
+        <div class="form-group">
+            <label for="">Oldpeak</label>
+            <input type="number" class="form-control" id="oldpeak" name="oldpeak" required>
+        </div>
+    <div class="form-group">
+        <label for="">Slope(0-2)</label>
+        <input type="number" class="form-control" id="slope" name="slope" required>
+    </div>
+    <div class="form-group">
+        <label for="">Ca(0-2)</label>
+        <input type="number" class="form-control" id="ca" name="ca" required>
+    </div>
+    <div class="form-group">
+        <label for="">Thal(1-3)</label>
+        <input type="number" class="form-control" id="thal" name="thal" required>
+    </div>
+        <!-- Repeat similar form-group blocks for other features -->
+        <div class="center-btn">
+            <button type="submit" class="btn btn-primary center-btn">Predict</button>
+        </div>
+    </form>
+    <div class="mt-3" id="result"></div>
+</div>
+
+<!-- Add Bootstrap JS and jQuery CDN links -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
